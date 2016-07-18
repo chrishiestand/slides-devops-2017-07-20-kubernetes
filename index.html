@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>What's New in Kubernetes, July 2016</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/beige.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+                <section>
+                    <h1>What's new in kubernetes</h1>
+                    <h2>July 17, 2016</h2>
+                    <aside class="notes"></aside>
+                </section>
+
+                <section>
+                    <figure>
+                        <figcaption>Simple kubernetes topology review</figcaption>
+                        <img src="master-nodes.png" title="kubernetes master node pod topology" alt="kubernetes master node pod topology"/>
+                    </figure>
+                </section>
+
+
+                <section>
+                    <h2>Scale Improvements</h2>
+                    <p>2,000 nodes<br />
+                        60,000 pods<br />
+                        meets SLOs (service level objective)</p>
+                </section>
+
+                <section>
+                    <p>v1.1: Job</p>
+                    <aside class="notes">cron-style in 1.4</aside>
+                </section>
+
+                <section>
+                    <p>v1.1: DaemonSet<sup style="font-family: serif; color: orange;"></sup></p>
+                    <aside class="notes">Can be run on all, or a subset of nodes</aside>
+                </section>
+
+                <section>
+                    <p>v1.1: Horizontal Pod Autoscaler<sup style="font-family: serif; color: orange;"></sup></p>
+                    <aside class="notes">supports custom metrics</aside>
+                </section>
+
+                <section>
+                    <p>v1.2: ConfigMap</p>
+                    <aside class="notes">load as a file or as environment variables</aside>
+                </section>
+
+                <section>
+                    <p>v1.2: Deployments<sup style="font-family: serif; color: orange;">β</sup></p>
+                </section>
+
+                <section>
+                    <p>v1.2: Graceful node shutdown (aka drain)</p>
+                </section>
+
+                <section>
+                    <p>v1.2: Ingress (aka L7 Load Balancer)<sup style="font-family: serif; color: orange;">β</sup></p>
+                </section>
+
+                <section>
+                    <p>v1.3: Role-based access control<sup style="font-family: serif; color: orange;">α</sup></p>
+                </section>
+
+                <section>
+                    <p>v1.3: Cluster Federation<sup style="font-family: serif; color: orange;">β</sup><br />
+                        aka übernetes<br />
+                        aka multi-zone</p>
+                    <aside class="notes">Will be multi-region and multi-cloud</aside>
+                </section>
+
+                <section>
+                    <p>v1.3: rktnetes<sup style="font-family: serif; color: orange;">experimental</sup></p>
+                    <aside class="notes">targetted "stable" in v1.4</aside>
+                </section>
+
+                <section>
+                    <p>v1.3: Minikube<sup style="font-family: serif; color: orange;">α</sup></p>
+                </section>
+
+                <section>
+                    <p>v1.3: Cluster Autoscaler<sup style="font-family: serif; color: orange;">β?</sup></p>
+                    <aside class="notes">AWS support is not here today: in development</aside>
+                </section>
+
+                <section>
+                    <p>v1.3: nVidia GPU Support<sup style="font-family: serif; color: orange;">α</sup><br />
+                </section>
+
+                <section>
+                    <p>v1.3: Init containers<sup style="font-family: serif; color: orange;">α</sup></p>
+                </section>
+
+                <section>
+                    <p>v1.3: PetSet (aka stateful pods)<sup style="font-family: serif; color: orange;">α</sup></p>
+                </section>
+
+                <section>
+                    <h2>1.4 Possible Features</h2>
+                    <p>v1.4 expected September 16, 2016</p>
+                    <ul>
+                        <li>Schedule Jobs (aka cron)</li>
+                        <li>Vertical Pod Scaling</li>
+                        <li>More TBD</li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
