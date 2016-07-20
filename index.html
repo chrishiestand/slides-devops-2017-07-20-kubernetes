@@ -32,10 +32,10 @@
                     <aside class="notes"></aside>
                 </section>
 
-                <section>
+                <section style="padding: 0; margin: 0;">
                     <figure>
                         <figcaption>Simple kubernetes topology review</figcaption>
-                        <img src="master-nodes.png" title="kubernetes master node pod topology" alt="kubernetes master node pod topology"/>
+                        <img src="master-nodes.png" title="kubernetes master node pod topology" alt="kubernetes master node pod topology" style="margin: 0;"/>
                     </figure>
                 </section>
 
@@ -53,12 +53,21 @@
                 </section>
 
                 <section>
-                    <p>v1.1: DaemonSet<sup style="font-family: serif; color: orange;"></sup></p>
+                    <figure>
+                        <figcaption><p>v1.1: DaemonSet</p></figcaption>
+                        <img src="kubernetes-daemonset.png" title="kubernetes daemonset" alt="kubernetes daemonset" style="margin: 0;"/>
+                    </figure>
+
                     <aside class="notes">Can be run on all, or a subset of nodes</aside>
                 </section>
 
                 <section>
-                    <p>v1.1: Horizontal Pod Autoscaler<sup style="font-family: serif; color: orange;"></sup></p>
+
+                    <figure>
+                        <figcaption><p>v1.1: Horizontal Pod Autoscaler</p></figcaption>
+                        <img src="kubernetes-horizontal-pod-autoscaler.png" title="kubernetes horizontal pod autoscaler" alt="kubernetes horizontal pod autoscaler" style="margin: 0;"/>
+                    </figure>
+
                     <aside class="notes">supports custom metrics</aside>
                 </section>
 
@@ -100,7 +109,11 @@
                 </section>
 
                 <section>
-                    <p>v1.3: Cluster Autoscaler<sup style="font-family: serif; color: orange;">β?</sup></p>
+                    <figure>
+                        <figcaption><p>v1.3: Cluster Autoscaler<sup style="font-family: serif; color: orange;">β?</sup></p></figcaption>
+                        <img src="kubernetes-cluster-autoscaler.png" title="kubernetes cluster autoscaler" alt="kubernetes cluster autoscaler" style="margin: 0;"/>
+                    </figure>
+
                     <aside class="notes">GCP support is here. AWS support is in development.</aside>
                 </section>
 
@@ -114,6 +127,13 @@
 
                 <section>
                     <p>v1.3: PetSet (aka stateful pods)<sup style="font-family: serif; color: orange;">α</sup></p>
+                    <ul>
+                        <li>Stable hostname</li>
+                        <li>Stable storage</li>
+                        <li>Ordinal Index</li>
+                    </ul>
+                    <aside class="notes">Really rough around the edges. Needs a lot of polish.</aside>
+
                 </section>
 
                 <section>
